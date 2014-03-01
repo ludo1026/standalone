@@ -1,0 +1,30 @@
+#set( $bean = $!{templateGenerationMap.getByClassGenId("display_template",$!{class.getGenId()})} )
+package $!{bean.getNamePackage()};
+
+import java.io.Serializable;
+import java.util.Date;
+import java.math.BigDecimal;
+
+/**
+ * ${bean.getName()}
+ */
+public class $!{bean.getName()} implements Serializable 
+{
+#foreach( $attribute in $class.getGenClassAttributes() )
+#if( $attribute.getDescription() )
+	/** $!{SU.capitalize($!{attribute.getDescription()})} */
+#end
+	private ${attribute.getJavaType()} ${SU.uncapitalize(${attribute.getJavaName()})};
+#end
+
+#foreach( $attribute in $class.getGenClassAttributes() )
+    public $!{attribute.getJavaType()} get$!{SU.capitalize($!{attribute.getJavaName()})}() {
+        return $!{SU.uncapitalize($!{attribute.getJavaName()})};
+    }
+    
+    public void set$!{SU.capitalize($!{attribute.getJavaName()})}($!{attribute.getJavaType()} $!{SU.uncapitalize($!{attribute.getJavaName()})}) {
+        this.$!{SU.uncapitalize($!{attribute.getJavaName()})} = $!{SU.uncapitalize($!{attribute.getJavaName()})};
+    }
+	
+#end
+}

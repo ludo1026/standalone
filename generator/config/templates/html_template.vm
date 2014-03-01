@@ -1,0 +1,30 @@
+<html>
+<body>
+<div>
+#set( $bean = $!{templateGenerationMap.getByClassGenId("bean_template",$!{class.getGenId()})} )
+<div>
+	<h1>$!{class.getJavaName()}</h1>
+	<form>
+#foreach( $attribute in $class.getGenClassAttributes() )
+#if( ! $attribute.getAssociationId() )
+#set( $htmlType = $attribute.get('htmlType') )
+#if( $htmlType == "hidden" )
+	<input type="hidden" name="${SU.uncapitalize(${attribute.getJavaName()})}" />
+#else
+	<div>
+		<label>${SU.uncapitalize($attribute.getJavaName())}</label>
+#if( $htmlType == "text" )
+		<input type="text" name="${SU.uncapitalize(${attribute.getJavaName()})}" />
+#elseif( $htmlType == "textarea" )
+		<textarea name="${SU.uncapitalize(${attribute.getJavaName()})}"></textarea>
+#end
+	</div>
+#end
+#end
+#end
+	</div>
+	</form>
+</div>
+</div>
+</body>
+</html>

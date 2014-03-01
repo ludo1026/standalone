@@ -1,0 +1,262 @@
+2014-03-01 14:05:58,526 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-03-01 14:05:58,526 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-03-01 14:05:58,528 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2014-03-01 14:05:58,531 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:05:58,532 - FileResourceLoader : adding path '.'
+2014-03-01 14:05:58,538 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2014-03-01 14:05:58,539 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2014-03-01 14:05:58,540 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2014-03-01 14:05:58,542 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2014-03-01 14:05:58,543 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2014-03-01 14:05:58,544 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2014-03-01 14:05:58,572 - Created '20' parsers.
+2014-03-01 14:05:58,576 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2014-03-01 14:05:58,577 - Velocimacro : Default library not found.
+2014-03-01 14:05:58,577 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2014-03-01 14:05:58,577 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2014-03-01 14:05:58,577 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2014-03-01 14:05:58,577 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2014-03-01 14:05:58,620 - ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:05:58,648 - ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:05:58,677 - ResourceManager : found config/templates/bean_jpa_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:05:58,681 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:05:58,681 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:05:58,681 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:05:58,681 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:05:58,681 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:05:58,681 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:05:58,681 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:05:58,681 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:05:58,681 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:05:58,681 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:05:58,681 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:05:58,681 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:05:58,681 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:05:58,681 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:05:58,682 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:05:58,682 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:05:58,707 - ResourceManager : found config/templates/bean_jpa_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:05:58,708 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:05:58,708 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:05:58,708 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:05:58,708 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:05:58,708 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:05:58,708 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:05:58,708 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:05:58,708 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:05:58,709 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:05:58,709 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:05:58,709 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:05:58,709 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:05:58,709 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:05:58,709 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:05:58,709 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:05:58,709 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:05:58,733 - ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:05:58,748 - ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:05:58,767 - ResourceManager : found config/templates/bean_jpa_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:05:58,768 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:05:58,768 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:05:58,768 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:05:58,768 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 43, column 26]
+2014-03-01 14:05:58,768 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 43, column 1]
+2014-03-01 14:05:58,768 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:05:58,768 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:05:58,768 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:05:58,768 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:05:58,768 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:05:58,768 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:05:58,769 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 43, column 26]
+2014-03-01 14:05:58,769 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 43, column 1]
+2014-03-01 14:05:58,769 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:05:58,769 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:05:58,769 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:05:58,769 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:05:58,769 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:05:58,769 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:05:58,769 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:05:58,769 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:05:58,769 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:05:58,769 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:05:58,769 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:05:58,786 - ResourceManager : found config/templates/bean_jpa_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:05:58,787 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:05:58,787 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:05:58,787 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:05:58,787 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 43, column 26]
+2014-03-01 14:05:58,787 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 43, column 1]
+2014-03-01 14:05:58,787 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:05:58,787 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:05:58,787 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:05:58,787 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:05:58,787 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:05:58,787 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:05:58,787 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 43, column 26]
+2014-03-01 14:05:58,787 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 43, column 1]
+2014-03-01 14:05:58,787 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:05:58,788 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:05:58,788 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:05:58,788 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:05:58,788 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:05:58,788 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:05:58,788 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:05:58,788 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:05:58,788 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:05:58,788 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:05:58,788 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:25:37,803 - Log4JLogChute initialized using file 'velocity.log'
+2014-03-01 14:25:37,804 - Starting Jakarta Velocity v1.5-SNAPSHOT (compiled: 2006-07-21 06:25:35)
+2014-03-01 14:25:37,804 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2014-03-01 14:25:37,804 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2014-03-01 14:25:37,805 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:58)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:87)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:144)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:202)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:682)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:232)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:108)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:77)
+	at org.ludo.codegenerator.core.ProcessManager.genererFichier(ProcessManager.java:87)
+	at org.ludo.codegenerator.main.CodeGeneratorMain.main(CodeGeneratorMain.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:217)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:152)
+	at org.apache.tools.ant.taskdefs.Java.run(Java.java:771)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:221)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:135)
+	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:108)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:392)
+	at org.apache.tools.ant.Target.performTasks(Target.java:413)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.eclipse.ant.internal.launching.remote.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:32)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.run(InternalAntRunner.java:424)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.main(InternalAntRunner.java:138)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.tools.ant.AntClassLoader.findClassInComponents(AntClassLoader.java:1365)
+	at org.apache.tools.ant.AntClassLoader.findClass(AntClassLoader.java:1315)
+	at org.apache.tools.ant.AntClassLoader.loadClass(AntClassLoader.java:1074)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 38 more
+2014-03-01 14:25:37,809 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-03-01 14:25:37,809 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-03-01 14:25:37,811 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2014-03-01 14:25:37,815 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:25:37,816 - FileResourceLoader : adding path '.'
+2014-03-01 14:25:37,822 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2014-03-01 14:25:37,823 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2014-03-01 14:25:37,826 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2014-03-01 14:25:37,828 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2014-03-01 14:25:37,830 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2014-03-01 14:25:37,831 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2014-03-01 14:25:37,859 - Created '20' parsers.
+2014-03-01 14:25:37,864 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2014-03-01 14:25:37,865 - Velocimacro : Default library not found.
+2014-03-01 14:25:37,865 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2014-03-01 14:25:37,865 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2014-03-01 14:25:37,865 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2014-03-01 14:25:37,865 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2014-03-01 14:25:37,908 - ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:25:37,938 - ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:25:37,967 - ResourceManager : found config/templates/bean_jpa_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:25:37,971 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:25:37,972 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:25:37,972 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:25:37,972 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:25:37,972 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:25:37,972 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:25:37,972 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:25:37,972 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:25:37,972 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:25:37,972 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:25:37,972 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:25:37,972 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:25:37,972 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:25:37,972 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:25:37,972 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:25:37,972 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:25:37,992 - ResourceManager : found config/templates/bean_jpa_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:25:37,993 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:25:37,993 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:25:37,993 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:25:37,993 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:25:37,993 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:25:37,993 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:25:37,993 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:25:37,993 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:25:37,993 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:25:37,993 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:25:37,993 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:25:37,993 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:25:37,993 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:25:37,993 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:25:37,993 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:25:37,993 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:25:38,020 - ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:25:38,036 - ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:25:38,055 - ResourceManager : found config/templates/bean_jpa_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:25:38,056 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:25:38,056 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:25:38,056 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:25:38,056 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:25:38,056 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:25:38,056 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:25:38,056 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:25:38,056 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:25:38,057 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:25:38,057 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:25:38,057 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:25:38,057 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:25:38,057 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:25:38,057 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:25:38,057 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:25:38,057 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:25:38,057 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:25:38,057 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:25:38,057 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:25:38,057 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:25:38,057 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:25:38,057 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:25:38,057 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:25:38,057 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:25:38,074 - ResourceManager : found config/templates/bean_jpa_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-03-01 14:25:38,076 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:25:38,076 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:25:38,076 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:25:38,076 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:25:38,076 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:25:38,076 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:25:38,077 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:25:38,077 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:25:38,077 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:25:38,077 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:25:38,077 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:25:38,077 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:25:38,077 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:25:38,077 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:25:38,077 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:25:38,077 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.
+2014-03-01 14:25:38,078 - Right side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 34]
+2014-03-01 14:25:38,078 - Left side (${attribute.getSqlName()}) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 41, column 60]
+2014-03-01 14:25:38,078 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 41, column 1]
+2014-03-01 14:25:38,078 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 42, column 37]
+2014-03-01 14:25:38,078 - Left side ($Column) of addition operation has null value. Operation not possible. config/templates/bean_jpa_template.vm [line 45, column 26]
+2014-03-01 14:25:38,078 - RHS of #set statement is null. Context will not be modified. config/templates/bean_jpa_template.vm [line 45, column 1]
+2014-03-01 14:25:38,078 - Left side ($attribute.getIsPrimaryKey()) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/bean_jpa_template.vm [line 46, column 37]
+2014-03-01 14:25:38,078 - Null reference [template 'config/templates/bean_jpa_template.vm', line 49, column 9] : $Column cannot be resolved.

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gen xmlns="http://generator/gen/schemas">
+
+  <stereotypes>
+    <stereotype name="bean" />
+    <stereotype name="display" />
+    <stereotype name="document" />
+  </stereotypes>
+
+  <generate>
+     <byStereotype stereotype="bean">
+        <templateGroup templateGroup="beanGroup" />
+     </byStereotype>
+     <byStereotype stereotype="display">
+        <templateGroup templateGroup="displayGroup" />
+     </byStereotype>
+     <byStereotype stereotype="document">
+        <templateGroup templateGroup="documentGroup" />
+     </byStereotype>
+  </generate>
+
+  <templateGroups>
+    <templateGroup name="beanGroup">
+      <template name="bean_template" />
+      <template name="bean_jpa_template" />
+    </templateGroup>
+    <templateGroup name="displayGroup">
+      <template name="display_template" />
+      <template name="mapper_template" />
+      <template name="html_template" />
+    </templateGroup>
+    <templateGroup name="documentGroup">
+      <template name="json_template" />
+    </templateGroup>
+  </templateGroups>
+
+  <templates inDir="config/templates" outDir="D:/workspace_ludo1026/glougloubar" packageJavaBase="com.glougloubar">
+    <template name="json_template" file="json_template.vm" outDir="src/main/resources/json" outFile="XXX.json" nameGeneratedElement="XXX" />
+    <template name="bean_template" file="bean_template.vm" packageJava="PPP.domain" outDir="src/main/java" outFile="XXX.java" nameGeneratedElement="XXX" />
+    <template name="bean_jpa_template" file="bean_jpa_template.vm" packageJava="PPP.domain.entity" outDir="src/main/java" outFile="XXXEntity.java" nameGeneratedElement="XXXEntity" />
+    <template name="display_template" file="display_template.vm" packageJava="PPP.display" outDir="src/main/java" outFile="XXXDisplay.java" nameGeneratedElement="XXXDisplay" />
+    <template name="mapper_template" file="mapper_template.vm" packageJava="PPP.mapper" outDir="src/main/java" outFile="XXXMapper.java" nameGeneratedElement="XXXMapper" />
+    <template name="html_template" file="html_template.vm" outDir="src/main/webapp" outFile="XXX.html" nameGeneratedElement="XXX" />
+  </templates>
+
+</gen>

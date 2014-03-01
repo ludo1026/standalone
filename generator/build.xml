@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Generator" basedir="." default="generate">
+
+	<description>
+            Génération de code
+    </description>
+
+	<!-- Classpath -->
+	<path id="master-classpath">
+		<fileset dir="lib">
+			<include name="*.jar" />
+		</fileset>
+		<pathelement path="." />
+	</path>
+
+	<!-- Generate config-model.xml from model.xmi -->
+	<target name="model-xmi_to_config-model-xml">
+		<java classname="org.ludo.umlgenerator.main.UMLConfigGeneratorMain">
+			<classpath refid="master-classpath" />
+		</java>
+	</target>
+
+	<!-- Generate config-model.xml from database -->
+	<target name="database_to_config-model-xml">
+		<java classname="org.ludo.jdbc.Main">
+			<classpath refid="master-classpath" />
+		</java>
+	</target>
+
+	<!-- Generate files -->
+	<target name="generate">
+		<java classname="org.ludo.codegenerator.main.CodeGeneratorMain">
+			<classpath refid="master-classpath" />
+		</java>
+	</target>
+
+</project>

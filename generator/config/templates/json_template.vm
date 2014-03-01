@@ -1,0 +1,12 @@
+#set( $bean = $!{templateGenerationMap.getByClassGenId("bean_template",$!{class.getGenId()})} )
+{
+	"_type" : $!{bean.getName()}
+#foreach( $attribute in $class.getGenClassAttributes() )
+#if( ! $attribute.getAssociationId() )
+	, "${SU.uncapitalize(${attribute.getJavaName()})}"
+#end
+#if( ${attribute.contains("test")} )
+	, ${attribute.get("test")}
+#end
+#end
+}

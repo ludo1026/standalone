@@ -1,0 +1,81 @@
+#set( $bean = $!{templateGenerationMap.getByClassGenId("bean_template",$!{class.getGenId()})} )
+package $!{bean.getNamePackage()};
+
+import java.io.Serializable;
+import java.util.Date;
+import java.math.BigDecimal;
+
+#set( $listImport = false )
+#foreach( $association in $class.getGenClassAssociations() )
+#set( $bean2 = $!{templateGenerationMap.getByClassGenId("bean_template",$!{association.getClassGenId()})} )
+#if( "1" != $!{association.getNbMax()} )
+#if( ! $listImport )
+#set( $listImport = true )
+import java.util.ArrayList;
+import java.util.List;
+#end
+#end
+import $!{bean2.getPackage()}.$!{bean2.getName()};
+#end
+
+/**
+ * ${bean.getName()}
+ */
+public class $!{bean.getName()} implements Serializable 
+{
+#foreach( $attribute in $class.getGenClassAttributes() )
+#if( ! $attribute.getAssociationId() )
+#if( $attribute.getDescription() )
+	/** $!{SU.capitalize($!{attribute.getDescription()})} */
+#end
+	private ${attribute.getJavaType()} ${SU.uncapitalize(${attribute.getJavaName()})};
+#end
+#end
+#foreach( $association in $class.getGenClassAssociations() )
+#set( $bean2 = $!{templateGenerationMap.getByClassGenId("bean_template",$!{association.getClassGenId()})} )
+#if( $association.getDescription() )
+	/** $!{SU.capitalize($!{association.getDescription()})} */
+#end
+#if( "1" == $!{association.getNbMax()} )
+	private $!{SU.capitalize($!{bean2.getName()})} $!{SU.uncapitalize($!{association.getJavaName()})};
+#end
+#if( "1" != $!{association.getNbMax()} )
+	private List<$!{SU.capitalize($!{bean2.getName()})}> $!{SU.uncapitalize($!{association.getJavaName()})}s = new ArrayList<$!{SU.capitalize($!{bean2.getName()})}>();
+#end
+#end
+
+#foreach( $attribute in $class.getGenClassAttributes() )
+#if( ! $attribute.getAssociationId() )
+    public $!{attribute.getJavaType()} get$!{SU.capitalize($!{attribute.getJavaName()})}() {
+        return $!{SU.uncapitalize($!{attribute.getJavaName()})};
+    }
+    
+    public void set$!{SU.capitalize($!{attribute.getJavaName()})}($!{attribute.getJavaType()} $!{SU.uncapitalize($!{attribute.getJavaName()})}) {
+        this.$!{SU.uncapitalize($!{attribute.getJavaName()})} = $!{SU.uncapitalize($!{attribute.getJavaName()})};
+    }
+	
+#end
+#end
+#foreach( $association in $class.getGenClassAssociations() )
+#set( $bean2 = $!{templateGenerationMap.getByClassGenId("bean_template",$!{association.getClassGenId()})} )
+#if( "1" == $!{association.getNbMax()} )
+    public $!{bean2.getName()} get$!{SU.capitalize($!{association.getJavaName()})}() {
+        return $!{SU.uncapitalize($!{association.getJavaName()})};
+    }
+    
+    public void set$!{SU.capitalize($!{association.getJavaName()})}($!{SU.capitalize($!{bean2.getName()})} $!{SU.uncapitalize($!{association.getJavaName()})}) {
+        this.$!{SU.uncapitalize($!{association.getJavaName()})} = $!{SU.uncapitalize($!{association.getJavaName()})};
+    }
+#end
+#if( "1" != $!{association.getNbMax()} )
+    public List<$!{SU.capitalize($!{bean2.getName()})}> get$!{SU.capitalize($!{association.getJavaName()})}() {
+        return $!{SU.uncapitalize($!{association.getJavaName()})}s;
+    }
+    
+    public void add$!{SU.capitalize($!{association.getJavaName()})}($!{SU.capitalize($!{bean2.getName()})} $!{SU.uncapitalize($!{association.getJavaName()})}) {
+        this.$!{SU.uncapitalize($!{association.getJavaName()})}s.add($!{SU.uncapitalize($!{association.getJavaName()})});
+    }
+#end
+
+#end
+}

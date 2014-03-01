@@ -1,0 +1,55 @@
+#set( $mapper = $!{templateGenerationMap.getByClassGenId("mapper_template",$!{class.getGenId()})} )
+#set( $display = $!{templateGenerationMap.getByClassGenId("display_template",$!{class.getGenId()})} )
+package $!{mapper.getNamePackage()};
+
+import java.io.Serializable;
+import java.util.Date;
+import java.math.BigDecimal;
+
+import $!{display.getPackage()}.$!{display.getName()};
+#set( $listImport = false )
+#foreach( $association in $class.getGenClassAssociations() )
+#set( $bean = $!{templateGenerationMap.getByClassGenId("bean_template",$!{association.get("classGenId")})} )
+#if( "1" != $!{association.getNbMax()} )
+#if( ! $listImport )
+#set( $listImport = true )
+import java.util.ArrayList;
+import java.util.List;
+#end
+#end
+import $!{bean.getPackage()}.$!{bean.getName()};
+#end
+
+/**
+ * ${mapper.getName()}
+ */
+public class $!{mapper.getName()} implements Serializable 
+{
+
+#foreach( $association in $class.getGenClassAssociations() )
+#set( $classBean = ${GU.getGenClassByGenId($association.get("classGenId"))} )
+#set( $bean = $!{templateGenerationMap.getByClassGenId("bean_template",$!{association.get("classGenId")})} )
+	public void map(${display.getName()} ${SU.uncapitalize($display.getName())}, ${bean.getName()} ${SU.uncapitalize($bean.getName())}) {
+#foreach( $attribute in $association.getGenClassAssociationAttributes() )
+#set( $originAttribute = $class.getGenClassAttributeForGenId($attribute.getOriginGenId()) )
+#set( $targetAttribute = $classBean.getGenClassAttributeForGenId($attribute.getTargetGenId()) )
+		${SU.uncapitalize($display.getName())}.set${SU.capitalize($originAttribute.getJavaName())}(
+			${SU.uncapitalize($bean.getName())}.get${SU.capitalize($targetAttribute.getJavaName())}());
+#end		
+	}
+
+#end
+#foreach( $association in $class.getGenClassAssociations() )
+#set( $classBean = ${GU.getGenClassByGenId($association.get("classGenId"))} )
+#set( $bean = $!{templateGenerationMap.getByClassGenId("bean_template",$!{association.get("classGenId")})} )
+	public void map(${bean.getName()} ${SU.uncapitalize($bean.getName())}, ${display.getName()} ${SU.uncapitalize($display.getName())}) {
+#foreach( $attribute in $association.getGenClassAssociationAttributes() )
+#set( $originAttribute = $class.getGenClassAttributeForGenId($attribute.getOriginGenId()) )
+#set( $targetAttribute = $classBean.getGenClassAttributeForGenId($attribute.getTargetGenId()) )
+		${SU.uncapitalize($bean.getName())}.set${SU.capitalize($targetAttribute.getJavaName())}(
+			${SU.uncapitalize($display.getName())}.get${SU.capitalize($originAttribute.getJavaName())}());
+#end		
+	}
+
+#end
+}

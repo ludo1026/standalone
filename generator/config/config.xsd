@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://generator/gen/schemas" xmlns:schemas="http://generator/gen/schemas">
+  <xs:element name="gen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="schemas:templates"/>
+        <xs:element ref="schemas:templateGroups"/>
+        <xs:element ref="schemas:stereotypes"/>
+        <xs:element ref="schemas:class"/>
+        <xs:element ref="schemas:generate"/>
+      </xs:sequence>
+      <xs:attribute name="_nb" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="templates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="schemas:template"/>
+      </xs:sequence>
+      <xs:attribute name="_nb" use="required" type="xs:integer"/>
+      <xs:attribute name="inDir" use="required" type="xs:NCName"/>
+      <xs:attribute name="outDir" use="required"/>
+      <xs:attribute name="packageJavaBase" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="templateGroups">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="schemas:templateGroup">
+          <xs:attribute name="_nb" use="required" type="xs:integer"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stereotypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="schemas:stereotype"/>
+      </xs:sequence>
+      <xs:attribute name="_nb" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="class">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="schemas:property"/>
+        <xs:element ref="schemas:attribute"/>
+        <xs:element ref="schemas:methode"/>
+        <xs:element ref="schemas:stereotype"/>
+        <xs:element ref="schemas:association"/>
+        <xs:element ref="schemas:parent"/>
+      </xs:sequence>
+      <xs:attribute name="description" use="required" type="xs:NCName"/>
+      <xs:attribute name="genId" use="required" type="xs:NCName"/>
+      <xs:attribute name="javaName" use="required" type="xs:NCName"/>
+      <xs:attribute name="javaPackage" use="required" type="xs:NCName"/>
+      <xs:attribute name="sqlTable" use="required" type="xs:NCName"/>
+      <xs:attribute name="sqlView" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="methode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="schemas:property"/>
+        <xs:element ref="schemas:parametre"/>
+        <xs:element ref="schemas:stereotype"/>
+      </xs:sequence>
+      <xs:attribute name="description" use="required" type="xs:NCName"/>
+      <xs:attribute name="genId" use="required" type="xs:NCName"/>
+      <xs:attribute name="javaName" use="required" type="xs:NCName"/>
+      <xs:attribute name="returnType" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="parametre">
+    <xs:complexType>
+      <xs:attribute name="description" use="required" type="xs:NCName"/>
+      <xs:attribute name="genId" use="required" type="xs:NCName"/>
+      <xs:attribute name="javaName" use="required" type="xs:NCName"/>
+      <xs:attribute name="javaType" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="association">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="schemas:attribute"/>
+        <xs:element ref="schemas:associationClass"/>
+      </xs:sequence>
+      <xs:attribute name="classGenId" use="required" type="xs:NCName"/>
+      <xs:attribute name="description" use="required" type="xs:NCName"/>
+      <xs:attribute name="genId" use="required" type="xs:NCName"/>
+      <xs:attribute name="javaName" use="required" type="xs:NCName"/>
+      <xs:attribute name="nbMax" use="required" type="xs:integer"/>
+      <xs:attribute name="nbMin" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="associationClass">
+    <xs:complexType>
+      <xs:attribute name="_nb" use="required" type="xs:integer"/>
+      <xs:attribute name="_type" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="parent">
+    <xs:complexType>
+      <xs:attribute name="classGenId" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="generate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="schemas:byClass"/>
+        <xs:element ref="schemas:byTemplateGroup"/>
+        <xs:element ref="schemas:byStereotype"/>
+      </xs:sequence>
+      <xs:attribute name="_nb" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="byClass">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="schemas:templateGroup">
+          <xs:attribute name="classGenId" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="byTemplateGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="schemas:stereotype"/>
+      </xs:sequence>
+      <xs:attribute name="templateGroup" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="byStereotype">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="schemas:templateGroup">
+          <xs:attribute name="stereotype" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="template">
+    <xs:complexType>
+      <xs:attribute name="file" type="xs:NCName"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="nameGeneratedElement" type="xs:NCName"/>
+      <xs:attribute name="outDir"/>
+      <xs:attribute name="outFile" type="xs:NCName"/>
+      <xs:attribute name="packageJava" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="templateGroup">
+    <xs:sequence>
+      <xs:element ref="schemas:templateGroup"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="templateGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="schemas:template"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:NCName"/>
+      <xs:attribute name="templateGroup" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stereotype">
+    <xs:complexType>
+      <xs:attribute name="name" type="xs:NCName"/>
+      <xs:attribute name="stereotype" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="property">
+    <xs:complexType>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="value" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="attribute">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="schemas:property"/>
+        <xs:element ref="schemas:stereotype"/>
+      </xs:sequence>
+      <xs:attribute name="associationId" type="xs:NCName"/>
+      <xs:attribute name="description" type="xs:NCName"/>
+      <xs:attribute name="genId" type="xs:NCName"/>
+      <xs:attribute name="isAutoIncremented" type="xs:boolean"/>
+      <xs:attribute name="isInSQLTable" type="xs:boolean"/>
+      <xs:attribute name="isPrimaryKey" type="xs:boolean"/>
+      <xs:attribute name="javaName" type="xs:NCName"/>
+      <xs:attribute name="javaType" type="xs:NCName"/>
+      <xs:attribute name="nbMax" type="xs:integer"/>
+      <xs:attribute name="nbMin" type="xs:integer"/>
+      <xs:attribute name="originGenId" type="xs:NCName"/>
+      <xs:attribute name="size" type="xs:integer"/>
+      <xs:attribute name="sqlName" type="xs:NCName"/>
+      <xs:attribute name="sqlType" type="xs:NCName"/>
+      <xs:attribute name="targetGenId" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
