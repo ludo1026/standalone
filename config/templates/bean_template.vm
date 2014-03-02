@@ -2,8 +2,9 @@
 package $!{bean.getNamePackage()};
 
 import java.io.Serializable;
-import java.util.Date;
-import java.math.BigDecimal;
+#foreach( $javaType in ${class.getGenClassAttributesByJavaTypes().keySet()} )
+import ${javaType};
+#end
 
 #set( $listImport = false )
 #foreach( $association in $class.getGenClassAssociations() )

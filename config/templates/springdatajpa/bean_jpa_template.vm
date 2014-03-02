@@ -2,8 +2,9 @@
 package ${bean.getPackage()};
 
 import java.io.Serializable;
-import java.util.Date;
-import java.math.BigDecimal;
+#foreach( $javaType in ${class.getGenClassAttributesByJavaTypes().keySet()} )
+import ${javaType};
+#end
 
 import javax.persistence.Column;
 import javax.persistence.Id;
@@ -38,7 +39,13 @@ public class $!{bean.getName()} implements Serializable
 #if( $attribute.getDescription() )
 	/** $!{SU.capitalize($!{attribute.getDescription()})} */
 #end
-#set( $Column = '@Column(name="'+${attribute.getSqlName()}+'"' )
+1
+#set( $Column = ${attribute.get("sqlName")} ) ## '@Column(name="'+${attribute.getSqlName()}+'"' )
+$Column
+2
+#if( ${attribute.has("size")} )
+#set( $Column = $Column + ', size="'+${attribute.get("size")}+'"' )
+#end
 #if( $attribute.getIsPrimaryKey() == "true" )
 #set( $Column = $Column + ", nullable=false" )
 #end
@@ -46,7 +53,7 @@ public class $!{bean.getName()} implements Serializable
 #if( $attribute.getIsPrimaryKey() == "true" )
 	@Id
 #end
-	$Column
+	$!{Column}
 	private ${attribute.getJavaType()} ${SU.uncapitalize(${attribute.getJavaName()})};
 #end
 #end
